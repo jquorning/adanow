@@ -1,5 +1,5 @@
 
-#!env_rb ruby
+#!/usr/bin/env ruby
 #
 # license: MIT
 
@@ -21,25 +21,33 @@ puts cmd
 
 # environment = env
 
+doc_tldr = <<DOC_TLDR
+ > #{app} #{env} setup
+ > #{app} #{install} all
+or simply
+ > #{app} setup
+DOC_TLDR
+
+doc_summary = <<DOC_SUMMARY
+ > #{app} #{env} check
+ > #{app} #{env} setup
+ > #{app} #{install} GNAT        -- #{Install} the GNAT compiler and tools
+ > #{app} #{install} GPRBuild    -- #{Install} the GPRBuild GNAT Project tools
+ > #{app} #{install} GNATStudio  -- #{Install} the GNAT Studio IDE
+ > #{app} #{install} Alire       -- #{Install} the Alire packaging tools
+DOC_SUMMARY
+
 puts ""
 puts "#{App} -- The Homebrew Ada installer for macOS                      "
 puts "--                                                                          "
 puts ""
 puts "tl;dr;                                                                      "
 puts "----                                                                        "
-puts " > #{app} #{env} setup"
-puts " > #{app} #{install} .all"
-puts "or simply"
-puts " > #{app} setup.all"
+puts doc_tldr
 puts
 puts "The not so short version"
 puts "----"
-puts " > #{app} #{env} check"
-puts " > #{app} #{env} setup"
-puts " > #{app} #{install} GNAT        -- #{Install} the GNAT compiler and tools     "
-puts " > #{app} #{install} GPRBuild    -- #{Install} the GPRBuild GNAT Project tools "
-puts " > #{app} #{install} GNATStudio  -- #{Install} the GNAT Studio IDE             "
-puts " > #{app} #{install} Alire       -- #{Install} the Alire packaging tools   "
+puts doc_summary
 puts
 puts "Usage                                                                       "
 puts "----                                                                        "
